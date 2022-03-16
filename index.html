@@ -11,9 +11,21 @@
     <link rel="icon" type="image/png" href="favicon.png" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/bd71bc8729.js" crossorigin="anonymous"></script>
+
+    <style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
 </head>
 
-<body class="bg-black overflow-x-hidden">
+<body class="no-scrollbar bg-black overflow-x-hidden">
+    <!-- <body class="bg-black overflow-x-hidden"> -->
     <!-- -------------------------------------------------------------------------- -->
     <!-- HEADER -->
     <!-- -------------------------------------------------------------------------- -->
@@ -107,7 +119,17 @@
         <!-- MY LIST -->
         <section class="pl-5 pt-5">
             <p class="text-white pb-2 pt-5 text-xl">My List</p>
-            <div class="flex space-x-2 overflow-x-auto">
+            <div class="group flex space-x-2 overflow-x-scroll no-scrollbar" id="My_List">
+                <div
+                    class="absolute text-3xl opacity-0 group-hover:opacity-100 pt-8 w-48 h-[162px] left-0 bg-gradient-to-r from-black">
+                    <button onclick="scrollLeftt('My_List')"><i
+                            class="group-hover:opacity-100 opacity-0 fas fa-angle-left text-white absolute text-4xl left-2"></i></button>
+                </div>
+                <div
+                    class="absolute right-0 text-3xl opacity-0 group-hover:opacity-100 pt-8 w-48 h-[162px] bg-gradient-to-l from-black">
+                    <button onclick="scrollRight('My_List')"><i
+                            class="group-hover:opacity-100 opacity-0 fas fa-angle-right text-white absolute text-4xl right-0"></i></button>
+                </div>
                 <div>
                     <div class="w-72">
                         <a href=""><img src="assets\img\Films\SpiderMan2.jpg" alt="image-serie" class="w-72" /></a>
@@ -133,13 +155,48 @@
                         <a href=""><img src="assets\img\Animes\Arcane.jpg" alt="image-serie" class="w-72" /></a>
                     </div>
                 </div>
+                <div>
+                    <div class="w-72">
+                        <a href=""><img src="assets\img\Series\SquidGame.jpg" alt="image-serie" class="w-72" /></a>
+                    </div>
+                </div>
+                <div>
+                    <div class="w-72">
+                        <a href=""><img src="assets\img\Series\SquidGame.jpg" alt="image-serie" class="w-72" /></a>
+                    </div>
+                </div>
+                <div>
+                    <div class="w-72">
+                        <a href=""><img src="assets\img\Series\SquidGame.jpg" alt="image-serie" class="w-72" /></a>
+                    </div>
+                </div>
+                <div>
+                    <div class="w-72">
+                        <a href=""><img src="assets\img\Series\SquidGame.jpg" alt="image-serie" class="w-72" /></a>
+                    </div>
+                </div>
+                <div>
+                    <div class="w-72">
+                        <a href=""><img src="assets\img\Series\SquidGame.jpg" alt="image-serie" class="w-72" /></a>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- TV SHOWS -->
-        <section class="pt-5">
+        <section class="pl-5 pt-5">
             <p class="text-white pb-2 pt-5 text-xl">TV Shows</p>
-            <div class="flex space-x-2 overflow-x-auto">
+            <div class="group flex space-x-2 overflow-x-scroll no-scrollbar items-center" id="TV_Shows">
+                <div
+                    class="absolute text-3xl opacity-0 group-hover:opacity-100 pt-8 w-48 h-[162px] left-0 bg-gradient-to-r from-black">
+                    <button onclick="scrollLeftt('TV_Shows')"><i
+                            class="group-hover:opacity-100 opacity-0 fas fa-angle-left text-white absolute text-4xl left-2"></i></button>
+                </div>
+                <div
+                    class="absolute right-0 text-3xl opacity-0 group-hover:opacity-100 pt-8 w-48 h-[162px] bg-gradient-to-l from-black">
+                    <button onclick="scrollRight('TV_Shows')"><i
+                            class="group-hover:opacity-100 opacity-0 fas fa-angle-right text-white absolute text-4xl right-0"></i></button>
+                </div>
                 <div>
                     <div class="w-72">
                         <a href=""><img src="assets\img\Series\QuiMent.jpg" alt="image-serie" class="w-72" /></a>
@@ -166,13 +223,48 @@
                         <a href=""><img src="assets\img\Series\SquidGame.jpg" alt="image-serie" class="w-72" /></a>
                     </div>
                 </div>
+                <div>
+                    <div class="w-72">
+                        <a href=""><img src="assets\img\Series\SquidGame.jpg" alt="image-serie" class="w-72" /></a>
+                    </div>
+                </div>
+                <div>
+                    <div class="w-72">
+                        <a href=""><img src="assets\img\Series\SquidGame.jpg" alt="image-serie" class="w-72" /></a>
+                    </div>
+                </div>
+                <div>
+                    <div class="w-72">
+                        <a href=""><img src="assets\img\Series\SquidGame.jpg" alt="image-serie" class="w-72" /></a>
+                    </div>
+                </div>
+                <div>
+                    <div class="w-72">
+                        <a href=""><img src="assets\img\Series\SquidGame.jpg" alt="image-serie" class="w-72" /></a>
+                    </div>
+                </div>
+                <div>
+                    <div class="w-72">
+                        <a href=""><img src="assets\img\Series\SquidGame.jpg" alt="image-serie" class="w-72" /></a>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- TRENDING NOW -->
         <section class="pl-5 pt-5">
             <p class="text-white pb-2 pt-5 text-xl">Trending Now</p>
-            <div class="flex space-x-2 overflow-x-auto">
+            <div class="group flex space-x-2 overflow-x-scroll no-scrollbar" id="Trending_Now">
+                <div
+                    class="absolute text-3xl opacity-0 group-hover:opacity-100 pt-8 w-48 h-[162px] left-0 bg-gradient-to-r from-black">
+                    <button onclick="scrollLeftt('Trending_Now')"><i
+                            class="group-hover:opacity-100 opacity-0 fas fa-angle-left text-white absolute text-4xl left-2"></i></button>
+                </div>
+                <div
+                    class="absolute right-0 text-3xl opacity-0 group-hover:opacity-100 pt-8 w-48 h-[162px] bg-gradient-to-l from-black">
+                    <button onclick="scrollRight('Trending_Now')"><i
+                            class="group-hover:opacity-100 opacity-0 fas fa-angle-right text-white absolute text-4xl right-0"></i></button>
+                </div>
                 <div>
                     <div class="w-72">
                         <a href=""><img src="assets\img\Series\Outlander.jpg" alt="image-serie" class="w-72" /></a>
@@ -191,6 +283,36 @@
                 <div>
                     <div class="w-72">
                         <a href=""><img src="assets\img\Series\LaCasaDePapel.jpg" alt="image-serie" class="w-72" /></a>
+                    </div>
+                </div>
+                <div>
+                    <div class="w-72">
+                        <a href=""><img src="assets\img\Series\VikingsValhalla.jpg" alt="image-serie"
+                                class="w-72" /></a>
+                    </div>
+                </div>
+                <div>
+                    <div class="w-72">
+                        <a href=""><img src="assets\img\Series\VikingsValhalla.jpg" alt="image-serie"
+                                class="w-72" /></a>
+                    </div>
+                </div>
+                <div>
+                    <div class="w-72">
+                        <a href=""><img src="assets\img\Series\VikingsValhalla.jpg" alt="image-serie"
+                                class="w-72" /></a>
+                    </div>
+                </div>
+                <div>
+                    <div class="w-72">
+                        <a href=""><img src="assets\img\Series\VikingsValhalla.jpg" alt="image-serie"
+                                class="w-72" /></a>
+                    </div>
+                </div>
+                <div>
+                    <div class="w-72">
+                        <a href=""><img src="assets\img\Series\VikingsValhalla.jpg" alt="image-serie"
+                                class="w-72" /></a>
                     </div>
                 </div>
                 <div>
@@ -260,7 +382,7 @@
                     </div>
                 </div>
                 <div class="w-48 relative overflow-hidden rounded-lg cursor-pointer">
-                    <a href="#"><img class="object-cover w-48 rounded" src="assets\img\Series\LOL.jpg"></a>
+                    <a href="#"><img class="object-cover w-48 rounded" src="assets\img\Films\LOL.jpg"></a>
                     <div
                         class="w-48 absolute top-0 bottom-0 px-6 py-4 bg-gradient-to-r from-cyan-600 hover:from-cyan-500 rounded">
                         <h3 class="w-48 mt-3 mr-28 font-bold text-white text-left">French</h3>
@@ -314,7 +436,7 @@
                 <!-- NETFLIX ORIGINALS -->
                 <section class="pl-5 pt-5">
                     <p class="text-white text-2xl pb-2 pt-5">Netflix Originals</p>
-                    <div class="flex overflow-x-hidden scroll-auto space-x-2">
+                    <div class="flex overflow-x-scroll no-scrollbar space-x-2">
                         <img src="assets\img\NetflixOriginals\NetflixOriginals1.jpg" alt="image-serie"
                             class="cursor-pointer" />
                         <img src="assets\img\NetflixOriginals\NetflixOriginals2.jpg" alt="image-serie"
@@ -331,7 +453,7 @@
                 <!-- TOP 10 -->
                 <section class="pl-5 pt-5">
                     <p class="text-2xl text-white">Top 10</p>
-                    <div class="overflow-x-auto flex scroll scroll-auto overflow-hidden items-center">
+                    <div class="group overflow-x-auto flex scroll scroll-auto overflow-hidden items-center">
 
                         <svg width="5%" height="100%" viewBox="-20 0 70 154">
                             <path stroke="#595959" stroke-linejoin="square" stroke-width="4"
@@ -373,7 +495,17 @@
                 <!-- SCI-FI -->
                 <section class="pl-5 pt-5">
                     <p class="text-white pb-2 pt-5 text-xl">Sci-Fi</p>
-                    <div class="flex space-x-2 overflow-x-auto">
+                    <div class="group flex space-x-2 overflow-x-scroll no-scrollbar" id="Sci-Fi">
+                        <div
+                            class="absolute text-3xl opacity-0 group-hover:opacity-100 pt-8 w-48 h-[162px] left-0 bg-gradient-to-r from-black">
+                            <button onclick="scrollLeftt('Sci-Fi')"><i
+                                    class="group-hover:opacity-100 opacity-0 fas fa-angle-left text-white absolute text-4xl left-2"></i></button>
+                        </div>
+                        <div
+                            class="absolute right-0 text-3xl opacity-0 group-hover:opacity-100 pt-8 w-48 h-[162px] bg-gradient-to-l from-black">
+                            <button onclick="scrollRight('Sci-Fi')"><i
+                                    class="group-hover:opacity-100 opacity-0 fas fa-angle-right text-white absolute text-4xl right-0"></i></button>
+                        </div>
                         <div>
                             <div class="w-72">
                                 <a href=""><img src="assets\img\Films\RetourVersLeFutur2.jpg" alt="image-serie"
@@ -404,13 +536,53 @@
                                         class="w-72" /></a>
                             </div>
                         </div>
+                        <div>
+                            <div class="w-72">
+                                <a href=""><img src="assets\img\Series\VikingsValhalla.jpg" alt="image-serie"
+                                        class="w-72" /></a>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="w-72">
+                                <a href=""><img src="assets\img\Series\VikingsValhalla.jpg" alt="image-serie"
+                                        class="w-72" /></a>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="w-72">
+                                <a href=""><img src="assets\img\Series\VikingsValhalla.jpg" alt="image-serie"
+                                        class="w-72" /></a>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="w-72">
+                                <a href=""><img src="assets\img\Series\VikingsValhalla.jpg" alt="image-serie"
+                                        class="w-72" /></a>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="w-72">
+                                <a href=""><img src="assets\img\Series\VikingsValhalla.jpg" alt="image-serie"
+                                        class="w-72" /></a>
+                            </div>
+                        </div>
                     </div>
                 </section>
 
                 <!-- BIG SUCCESS -->
                 <section class="pl-5 pt-5">
                     <p class="text-white pb-2 pt-5 text-xl">Big Success</p>
-                    <div class="flex space-x-2 overflow-x-auto">
+                    <div class="group flex space-x-2 overflow-x-scroll no-scrollbar" id="Big_Success">
+                        <div
+                            class="absolute text-3xl opacity-0 group-hover:opacity-100 pt-8 w-48 h-[162px] left-0 bg-gradient-to-r from-black">
+                            <button onclick="scrollLeftt('Big_Success')"><i
+                                    class="group-hover:opacity-100 opacity-0 fas fa-angle-left text-white absolute text-4xl left-2"></i></button>
+                        </div>
+                        <div
+                            class="absolute right-0 text-3xl opacity-0 group-hover:opacity-100 pt-8 w-48 h-[162px] bg-gradient-to-l from-black">
+                            <button onclick="scrollRight('Big_Success')"><i
+                                    class="group-hover:opacity-100 opacity-0 fas fa-angle-right text-white absolute text-4xl right-0"></i></button>
+                        </div>
                         <div>
                             <div class="w-72">
                                 <a href=""><img src="assets\img\Series\SquidGame.jpg" alt="image-serie"
@@ -440,13 +612,53 @@
                                         class="w-72" /></a>
                             </div>
                         </div>
+                        <div>
+                            <div class="w-72">
+                                <a href=""><img src="assets\img\Series\LaCasaDePapel.jpg" alt="image-serie"
+                                        class="w-72" /></a>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="w-72">
+                                <a href=""><img src="assets\img\Series\LaCasaDePapel.jpg" alt="image-serie"
+                                        class="w-72" /></a>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="w-72">
+                                <a href=""><img src="assets\img\Series\LaCasaDePapel.jpg" alt="image-serie"
+                                        class="w-72" /></a>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="w-72">
+                                <a href=""><img src="assets\img\Series\LaCasaDePapel.jpg" alt="image-serie"
+                                        class="w-72" /></a>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="w-72">
+                                <a href=""><img src="assets\img\Series\LaCasaDePapel.jpg" alt="image-serie"
+                                        class="w-72" /></a>
+                            </div>
+                        </div>
                     </div>
                 </section>
 
                 <!-- FILMS -->
                 <section class="pl-5 pt-5">
                     <p class="text-white pb-2 pt-5 text-xl">Films</p>
-                    <div class="flex space-x-2 overflow-x-auto">
+                    <div class="group flex space-x-2 overflow-x-scroll no-scrollbar" id="Films">
+                        <div
+                            class="absolute text-3xl opacity-0 group-hover:opacity-100 pt-8 w-48 h-[162px] left-0 bg-gradient-to-r from-black">
+                            <button onclick="scrollLeftt('Films')"><i
+                                    class="group-hover:opacity-100 opacity-0 fas fa-angle-left text-white absolute text-4xl left-2"></i></button>
+                        </div>
+                        <div
+                            class="absolute right-0 text-3xl opacity-0 group-hover:opacity-100 pt-8 w-48 h-[162px] bg-gradient-to-l from-black">
+                            <button onclick="scrollRight('Films')"><i
+                                    class="group-hover:opacity-100 opacity-0 fas fa-angle-right text-white absolute text-4xl right-0"></i></button>
+                        </div>
                         <div>
                             <div class="w-72">
                                 <a href=""><img src="assets\img\Films\LOL.jpg" alt="image-serie" class="w-72" /></a>
@@ -475,13 +687,53 @@
                                         class="w-72" /></a>
                             </div>
                         </div>
+                        <div>
+                            <div class="w-72">
+                                <a href=""><img src="assets\img\Films\ManOfSteel.jpg" alt="image-serie"
+                                        class="w-72" /></a>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="w-72">
+                                <a href=""><img src="assets\img\Films\ManOfSteel.jpg" alt="image-serie"
+                                        class="w-72" /></a>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="w-72">
+                                <a href=""><img src="assets\img\Films\ManOfSteel.jpg" alt="image-serie"
+                                        class="w-72" /></a>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="w-72">
+                                <a href=""><img src="assets\img\Films\ManOfSteel.jpg" alt="image-serie"
+                                        class="w-72" /></a>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="w-72">
+                                <a href=""><img src="assets\img\Films\ManOfSteel.jpg" alt="image-serie"
+                                        class="w-72" /></a>
+                            </div>
+                        </div>
                     </div>
                 </section>
 
                 <!-- ANIMES -->
                 <section class="pl-5 pt-5">
                     <p class="text-white pb-2 pt-5 text-xl">Animes</p>
-                    <div class="flex space-x-2 overflow-x-auto">
+                    <div class="group flex space-x-2 overflow-x-scroll no-scrollbar" id="Animes">
+                        <div
+                            class="absolute text-3xl opacity-0 group-hover:opacity-100 pt-8 w-48 h-[162px] left-0 bg-gradient-to-r from-black">
+                            <button onclick="scrollLeftt('Animes')"><i
+                                    class="group-hover:opacity-100 opacity-0 fas fa-angle-left text-white absolute text-4xl left-2"></i></button>
+                        </div>
+                        <div
+                            class="absolute right-0 text-3xl opacity-0 group-hover:opacity-100 pt-8 w-48 h-[162px] bg-gradient-to-l from-black">
+                            <button onclick="scrollRight('Animes')"><i
+                                    class="group-hover:opacity-100 opacity-0 fas fa-angle-right text-white absolute text-4xl right-0"></i></button>
+                        </div>
                         <div>
                             <div class="w-72">
                                 <a href=""><img src="assets\img\Animes\GreatPretender.jpg" alt="image-serie"
@@ -510,13 +762,53 @@
                                         class="w-72" /></a>
                             </div>
                         </div>
+                        <div>
+                            <div class="w-72">
+                                <a href=""><img src="assets\img\Animes\YourName.jpg" alt="image-serie"
+                                        class="w-72" /></a>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="w-72">
+                                <a href=""><img src="assets\img\Animes\YourName.jpg" alt="image-serie"
+                                        class="w-72" /></a>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="w-72">
+                                <a href=""><img src="assets\img\Animes\YourName.jpg" alt="image-serie"
+                                        class="w-72" /></a>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="w-72">
+                                <a href=""><img src="assets\img\Animes\YourName.jpg" alt="image-serie"
+                                        class="w-72" /></a>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="w-72">
+                                <a href=""><img src="assets\img\Animes\YourName.jpg" alt="image-serie"
+                                        class="w-72" /></a>
+                            </div>
+                        </div>
                     </div>
                 </section>
 
                 <!-- STUDIO GHIBLI -->
                 <section class="pl-5 pt-5">
                     <p class="text-white pb-2 pt-5 text-xl">Studio Ghibli</p>
-                    <div class="flex space-x-2 overflow-x-auto">
+                    <div class="group flex space-x-2 overflow-x-scroll no-scrollbar" id="Studio_Ghibli">
+                        <div
+                            class="absolute text-3xl opacity-0 group-hover:opacity-100 pt-8 w-48 h-[162px] left-0 bg-gradient-to-r from-black">
+                            <button onclick="scrollLeftt('Studio_Ghibli')"><i
+                                    class="group-hover:opacity-100 opacity-0 fas fa-angle-left text-white absolute text-4xl left-2"></i></button>
+                        </div>
+                        <div
+                            class="absolute right-0 text-3xl opacity-0 group-hover:opacity-100 pt-8 w-48 h-[162px] bg-gradient-to-l from-black">
+                            <button onclick="scrollRight('Studio_Ghibli')"><i
+                                    class="group-hover:opacity-100 opacity-0 fas fa-angle-right text-white absolute text-4xl right-0"></i></button>
+                        </div>
                         <div>
                             <div class="w-72">
                                 <a href=""><img src="assets\img\StudioGhibli\LaCollineAuxCoquelicots.jpg"
@@ -538,6 +830,36 @@
                         <div>
                             <div class="w-72">
                                 <a href=""><img src="assets\img\StudioGhibli\MonVoisinTotoro.jpg" alt="image-serie"
+                                        class="w-72" /></a>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="w-72">
+                                <a href=""><img src="assets\img\StudioGhibli\SouvenirsDemarnie.jpg" alt="image-serie"
+                                        class="w-72" /></a>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="w-72">
+                                <a href=""><img src="assets\img\StudioGhibli\SouvenirsDemarnie.jpg" alt="image-serie"
+                                        class="w-72" /></a>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="w-72">
+                                <a href=""><img src="assets\img\StudioGhibli\SouvenirsDemarnie.jpg" alt="image-serie"
+                                        class="w-72" /></a>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="w-72">
+                                <a href=""><img src="assets\img\StudioGhibli\SouvenirsDemarnie.jpg" alt="image-serie"
+                                        class="w-72" /></a>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="w-72">
+                                <a href=""><img src="assets\img\StudioGhibli\SouvenirsDemarnie.jpg" alt="image-serie"
                                         class="w-72" /></a>
                             </div>
                         </div>
@@ -630,6 +952,7 @@
             </div>
         </section>
     </footer>
+    <script src="./assets/js/main.js"></script>
 </body>
 
 </html>
